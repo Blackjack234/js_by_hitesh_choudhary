@@ -48,9 +48,21 @@ const users = [
 
 // console.log(users[1].email);
 
-console.log(Object.keys(tinderUser)); //Returns the names of the enumerable string properties and methods of an object. this returns an array containg all the keys of that 
+// console.log(Object.keys(tinderUser)); //Returns the names of the enumerable string properties and methods of an object. this returns an array containg all the keys of that 
 // objects in an array format.
-console.log(Object.values(tinderUser)); // similar to keys methos but returns an array contaning the values of the object
-console.log(Object.entries(tinderUser)); // returns an array and every key value is turn into an array of 2 elements itself
+// console.log(Object.values(tinderUser)); // similar to keys methos but returns an array contaning the values of the object
+// console.log(Object.entries(tinderUser)); // returns an array and every key value is turn into an array of 2 elements itself
 
-console.log(tinderUser.hasOwnProperty("isLogin"));
+// console.log(tinderUser.hasOwnProperty("isLogin"));
+
+
+const  course = {
+    courseName:"js in hindi",
+    price:"999",
+    Techer:"Anirban"
+}
+
+const {courseName:name,price,Techer} = course
+
+// console.log(`course is ${courseName}, price is ${price} and teacher ${Techer}`);
+console.log(`course is ${name}, price is ${price} and teacher ${Techer}`);
