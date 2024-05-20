@@ -9,10 +9,64 @@ if(true){
     let a = 10
     const b = 20
 
-    console.log("INNER : ", a);
+    // console.log("INNER : ", a);
 
 }
 
-console.log(a);
+// console.log(a);
 // console.log(b);
 // console.log(c);
+
+
+function one(){
+    const username = "Anirban"
+
+    function two(){
+        const website =  "somthing.com"
+
+        console.log(username);
+    }
+
+    // console.log(website);
+
+    two()
+}
+
+// one()
+
+if(true){
+ const username = "anirban"
+
+ if(username === "anirban"){
+     const website = " something.com"
+
+    //  console.log(username + website);
+
+ }
+//  console.log(website);
+}
+
+// console.log(username);
+
+//++++++++++++++++++++++ interesting +++++++++++++++++++++
+
+//hoisting
+
+
+console.log(addone(5));
+
+function addone(num){
+ return num + 1
+}
+
+// addone(5)
+
+//below this is called an expression ,simplly a variable holding a function
+
+addtwo(5) // Cannot access 'addtwo' before initialization
+
+const addtwo = function(num){   
+return num + 2
+}
+
+// addtwo(5)
