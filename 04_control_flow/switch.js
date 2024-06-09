@@ -32,3 +32,10 @@ switch (month) {
         console.log("Default case ");
         break;
 }
+
+
+/*
+now in switch case if a condition is matched then form theat matched portion to all the below code will be executed , that's why 
+we use' break ' in it so that after the condition matched only that block will perform 
+
+*/
