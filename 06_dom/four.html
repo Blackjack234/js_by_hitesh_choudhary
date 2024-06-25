@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <input type="text" id="lang" name="lang" />
+    <button type="button" onclick="addLi()">Add</button>
+
+    <ul class="language">
+      <li>c++</li>
+      <li>ruby</li>
+      <li>javascript</li>
+      <li>python</li>
+      <li>php</li>
+      <li>java</li>
+    </ul>
+</body>
+<script> 
+let inputField = document.querySelector("#lang");
+    
+function addLi() {
+       
+        const lang = inputField.value;
+        const unorderList = document.querySelector('.language');
+        if (lang) {
+            const nextLi = document.createElement('li');
+            nextLi.innerHTML = lang;
+            unorderList.appendChild(nextLi);
+            inputField.value = '';
+        }
+
+        //Edit
+
+        const newLang = document.querySelector('li:nth-child(4)')
+        console.log(newLang);
+
+        const newLi = document.createElement('li')
+        newLi.textContent = "mojo";
+        if (newLang.textContent !== "mojo") {
+            newLang.replaceWith(newLi)
+        }
+
+  //remove 
+
+
+
+    }
+
+    const lastLang = document.querySelector('.language li:last-child')
+    console.log(lastLang);
+
+    lastLang.remove()
+
+</script>
+
+</html>
