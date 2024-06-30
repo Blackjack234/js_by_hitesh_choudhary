@@ -37,3 +37,18 @@ document.querySelector('form').addEventListener('submit', (e) => {
 });
 ```
 
+## Display clock
+
+The following is a JavaScript code snippet for a clock display:
+
+```javascript
+const clock = document.querySelector('#clock');
+
+
+setInterval(()=>{
+  const date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString()
+},1000)
+```
+
