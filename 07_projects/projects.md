@@ -149,3 +149,67 @@ function newGame() {
 
 ```
 
+## Generate random back ground colour 
+
+The following is a js code for a generate random color code .
+```javascript
+// generate random color
+
+const randomColor = function () {
+  const hexCode = '0123456789ABCDEF';
+  let colorCode = '#';
+  for (let i = 0; i < 6; i++) {
+   colorCode += hexCode[Math.floor(Math.random()*16)]
+  }
+  return colorCode
+};
+
+let interverId;
+const startChangingColor = function (){
+  function changeBackGround (){
+    document.querySelector("body").style.backgroundColor = randomColor();
+  }
+if(!interverId){
+  interverId = setInterval(changeBackGround,1000)
+}
+ 
+}
+
+const stopChangingColor = function (){
+ clearInterval(interverId)
+ interverId = null;
+}
+
+
+document.querySelector("#start").addEventListener('click',startChangingColor)
+
+document.querySelector("#stop").addEventListener('click',stopChangingColor)
+```
+
+## Keyboard Check key press
+The following is  a code for a keyboard key check when pressed.
+
+```javascript
+const insert = document.querySelector("#insert")
+
+window.addEventListener("keydown",(e)=>{
+  insert.innerHTML = `
+  <div class="color">
+  <table>
+  <tr>
+    <th>key</th>
+    <th>Key code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " "?"Space":e.key.toLocaleUpperCase()}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+  </div>
+  `
+})
+```
+
